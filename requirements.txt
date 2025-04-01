@@ -1,0 +1,6 @@
+customtkinter
+ytmusicapi
+python-mpv
+yt-dlp
+Pillow
+requests
