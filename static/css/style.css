@@ -1,15 +1,23 @@
 .sidebar {
-    background-color: #1db954;
+    background-color: #FBFBFB;
     color: white;
     height: 100vh;
+    border-right:  2px ;
+    border-color:  grey !important;
+
+}
+#TitleText{
+    color:#5578D4;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .sidebar a {
     color: white;
     text-decoration: none;
 }
-.sidebar a:hover {
-    background-color: #1a9d45;
-}
+
 .main-content {
     padding: 20px;
 }
@@ -18,6 +26,57 @@
     color: white;
     padding: 10px;
 }
-.btn{
-    margin: auto 5;
+#NaviButton{
+    background-color: #5578D4 !important;
+    max-height: 50px !important;
+    box-shadow: gray !important;
+    margin: 0px 5px 0px 5px;
+
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+/* Hover effect to show ::before and ::after */
+#ContentCard:hover::before,
+#ContentCard:hover::after {
+  opacity: 1; /* Visible on hover */
+}
+#ContentCard::after, #ContentCard::before{
+
+    background-image: conic-gradient(
+        from var(--angle),
+        transparent 70%,  /* Transparency to blend the edges */
+        #5578D4 65%,      
+        #5578D4 70%,      
+        #5578D4 80%,      
+        #5578D4 90%,      
+        transparent 100%  /* Smooth transition to transparent */
+    );
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0;
+    padding: 3px;
+    border-radius: 5px ;
+    animation: 3s spinFire linear infinite;
+
+}
+#ContentCard::before{
+    filter: blur(1.5rem)
+    opacity(0.5)
+}
+@keyframes spinFire {
+    from{
+        --angle:0deg
+    }to{
+        --angle:360deg
+    }
+    
 }

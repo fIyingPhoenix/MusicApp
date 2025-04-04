@@ -1,0 +1,63 @@
+.button, .tab{
+	-fx-font-weight: bold;  
+	-fx-background-color: #5578D4; 
+	-fx-text-fill: white; /* White text color */
+	-fx-border-radius: 5px; /* Rounded corners */
+	-fx-background-radius: 5px; /* Rounded background corners */
+	-fx-effect: dropshadow(gaussian, #898989, 10, 0, 0, 1); 
+	-fx-transition: scale 0.3s ease-in-out; /* Transition for hover effect */
+}
+#btnPlayPause, #btnStop, #btnBack, #btnNext{
+	-fx-font-size: 20px; 
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab {
+	-fx-pref-width: 50px; /* Adjust width to fit text */
+	-fx-pref-height: 50px; /* Adjust height for better spacing */
+	-fx-padding: 0px 0px 0px 18px;
+}
+.tab-label {
+	-fx-rotate: 90; /* Rotates the text 90 degrees */
+	-fx-text-fill: #FFFFFF; 
+	-fx-font-size: 20px;  
+}
+
+.tab {
+		-fx-alignment: center-right; /* Ensures tab content is centered */
+}
+.BorderPane {
+	-fx-background-color: #FFFFFF;
+}
+.button:hover .tab:hover{
+    -fx-background-color: #5578D4; 
+	-fx-effect: dropshadow(gaussian, #5578D4, 10, 0, 0, 5);
+}
+
+.button:pressed, .tab:pressed{
+    -fx-background-color: #4F4F4F; 
+    -fx-scale-x: 1.05; 
+    -fx-scale-y: 1.05;
+}
+.tab:selected {
+	-fx-border-color: transparent;
+	-fx-focus-color: transparent;
+	-fx-faint-focus-color: transparent;
+	-fx-background-color: #4F4F4F; 
+}
+#BottomPanel{
+	-fx-border-top-width: 1px;
+	-fx-background-color: #FBFBFB;
+}
+#VolumeSlider {           
+    -fx-pref-width: 200px;         
+}
+
+#volumeLabel {         
+    -fx-text-fill: #5578D4;         
+    -fx-font-size: 14px;            
+    -fx-font-weight: bold;          
+    -fx-padding: 5px;               
+}

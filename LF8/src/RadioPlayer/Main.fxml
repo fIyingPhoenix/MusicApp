@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@main.css" fx:controller="RadioPlayer.Controller" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <AnchorPane id="BottomPanel" prefHeight="70.0" prefWidth="600.0" stylesheets="@main.css" BorderPane.alignment="CENTER">
+         <children>
+            <!-- Left side buttons in an HBox anchored to the left -->
+            <HBox alignment="CENTER_LEFT" spacing="2.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Button fx:id="btnPlayPause" onAction="#OnBtnPlayPauseClick" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@main.css" text="⏯" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnStop" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@main.css" text="⏹" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnBack" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@main.css" text="⏮" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnNext" mnemonicParsing="false"  prefHeight="50.0" prefWidth="50.0" stylesheets="@main.css" text="⏭" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            
+            <!-- Right side volume controls in a VBox anchored to the right -->
+            <VBox alignment="CENTER_RIGHT" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <Label fx:id="volumeLabel" prefHeight="17.0" prefWidth="138.0" text="Volume" textFill="#5578d4" />
+                  <Slider fx:id="VolumeSlider" blockIncrement="1.0" prefWidth="138.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <TabPane prefHeight="350.0" side="LEFT" prefWidth="600.0" stylesheets="@main.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab id="tabHome"  text="☰">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@main.css" />
+            </content>
+          </Tab>
+          <Tab id="TabSettings" text="☢">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
